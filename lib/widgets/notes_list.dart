@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
+import '../models/note.dart';
 import 'notes_list_item.dart';
 
 class NotesList extends StatelessWidget {
-  const NotesList({super.key});
+  NotesList({super.key});
+
+  var notes = <Note>[];
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 5,
-      itemBuilder: (context, index) => NotesListItem(),
+      itemCount: notes.length,
+      itemBuilder: (context, index) => NotesListItem(title: notes[index].title),
     );
   }
 }

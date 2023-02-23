@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:journell/animations/slide_right_route.dart';
+import 'package:journell/widgets/new_note_button.dart';
 
 import '../widgets/notes_list.dart';
 import 'settings_screen.dart';
@@ -20,8 +22,8 @@ class HomeScreen extends StatelessWidget {
               onPressed: (() {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const SettingsScreen(),
+                  SlideRightRoute(
+                    page: const SettingsScreen(),
                   ),
                 );
               }),
@@ -31,6 +33,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: NotesList(),
+      floatingActionButton: NewNoteButton(),
     );
   }
 }
