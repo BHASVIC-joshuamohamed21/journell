@@ -7,9 +7,14 @@ import '../widgets/notes_list.dart';
 import 'note_screen.dart';
 import 'settings_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   final _notes = <Note>[
     Note('Example'),
   ];
@@ -17,13 +22,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void newNoteCallback() {
-      Note newNote = Note('');
-      _notes.add(newNote);
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => NoteScreen(note: newNote),
-          ));
+      setState(() {
+        Note newNote = Note('New Note');
+        _notes.add(newNote);
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => NoteScreen(note: newNote),
+            )).then((_) {
+          setState(() {});
+        });
+      });
     }
 
     return Scaffold(
