@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../models/note.dart';
 import '../screens/note_screen.dart';
 
 class NotesListItem extends StatelessWidget {
-  final String title;
-  const NotesListItem({Key? key, required this.title}) : super(key: key);
+  final Note note;
+  const NotesListItem({Key? key, required this.note}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,9 @@ class NotesListItem extends StatelessWidget {
       onTap: () => Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => NoteScreen(title: title,),
+            builder: (context) => NoteScreen(
+              note: note,
+            ),
           )),
       child: Container(
         padding: EdgeInsets.all(15),
@@ -27,14 +30,13 @@ class NotesListItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  title,
+                  note.title,
                   style: TextStyle(fontSize: 20),
                 ),
-                Text('02/02/23'),
+                Text('${note.date.day}/${note.date.month}/${note.date.year}'),
               ],
             ),
-            Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.')
+            Text(note.content ?? ''),
           ],
         ),
       ),
