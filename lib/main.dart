@@ -11,7 +11,8 @@ final defaultSettings = {
 void main() async {
 //  final prefsInstance = await SharedPreferences.getInstance();
 //  var effectiveSettings = {};
-    var effectiveSettings = defaultSettings; // temporary for having no real settings
+  var effectiveSettings =
+      defaultSettings; // temporary for having no real settings
 
 //  defaultSettings.forEach((key, value) {
 //    // iter default settings
@@ -20,13 +21,14 @@ void main() async {
 //  });
 
 //  JournellApp app = JournellApp(settings: effectiveSettings, prefsInstance: prefsInstance);
-    JournellApp app = JournellApp(settings: effectiveSettings);
+  JournellApp app = JournellApp(settings: effectiveSettings);
 
   runApp(app);
 }
 
 class JournellApp extends StatefulWidget {
   final Map<dynamic, dynamic> settings;
+
 //  final SharedPreferences prefsInstance;
 
   get constructor => JournellApp.new;

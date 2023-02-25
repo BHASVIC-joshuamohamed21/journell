@@ -15,7 +15,7 @@ final darkScheme = ColorScheme.fromSeed(
 );
 
 final calculatedLightTheme =
-ThemeData.from(colorScheme: lightScheme); // derive theme from color scheme
+    ThemeData.from(colorScheme: lightScheme); // derive theme from color scheme
 final calculatedDarkTheme = ThemeData.from(colorScheme: darkScheme);
 
 final effectiveLightTheme = calculatedLightTheme.copyWith();

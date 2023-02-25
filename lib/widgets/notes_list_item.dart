@@ -5,6 +5,7 @@ import '../screens/note_screen.dart';
 
 class NotesListItem extends StatelessWidget {
   final Note note;
+
   const NotesListItem({Key? key, required this.note}) : super(key: key);
 
   @override

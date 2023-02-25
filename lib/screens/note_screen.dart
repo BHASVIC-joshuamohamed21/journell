@@ -4,6 +4,7 @@ import '../models/note.dart';
 
 class NoteScreen extends StatefulWidget {
   final Note note;
+
   const NoteScreen({super.key, required this.note});
 
   @override
@@ -52,7 +53,6 @@ class _NoteScreenState extends State<NoteScreen> {
 class _TitleField extends StatelessWidget {
   final TextEditingController controller;
   final String initialTitle;
-
 
   // TODO: why isn't key ever passed?
   const _TitleField(
