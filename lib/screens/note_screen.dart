@@ -12,7 +12,7 @@ class NoteScreen extends StatefulWidget {
 
 class _NoteScreenState extends State<NoteScreen> {
   bool _typing = false;
-  TextEditingController _titleController = TextEditingController();
+  final TextEditingController _titleController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +53,8 @@ class _TitleField extends StatelessWidget {
   final TextEditingController controller;
   final String initialTitle;
 
+
+  // TODO: why isn't key ever passed?
   const _TitleField(
       {super.key, required this.controller, required this.initialTitle});
 
@@ -62,7 +64,7 @@ class _TitleField extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: TextField(
         controller: controller,
-        style: TextStyle(color: Colors.white),
+        style: const TextStyle(color: Colors.white),
         decoration: InputDecoration(
           border: InputBorder.none,
           hintText: initialTitle,

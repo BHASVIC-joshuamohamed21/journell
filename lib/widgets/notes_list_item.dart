@@ -18,7 +18,7 @@ class NotesListItem extends StatelessWidget {
             ),
           )),
       child: Container(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         height: 100,
         decoration: BoxDecoration(
           border:
@@ -31,7 +31,7 @@ class NotesListItem extends StatelessWidget {
               children: [
                 Text(
                   note.title,
-                  style: TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 20),
                 ),
                 Text('${note.date.day}/${note.date.month}/${note.date.year}'),
               ],

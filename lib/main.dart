@@ -72,7 +72,7 @@ class _JournellAppState extends State<JournellApp> {
       theme: effectiveLightTheme,
       darkTheme: effectiveDarkTheme,
       themeMode: themeModeTable[widget.settings["colorScheme"]],
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

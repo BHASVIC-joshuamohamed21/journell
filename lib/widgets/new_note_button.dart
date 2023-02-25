@@ -9,7 +9,7 @@ class NewNoteButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: () => newNoteCallback(),
-      child: Icon(Icons.add),
+      child: const Icon(Icons.add),
     );
   }
 }
