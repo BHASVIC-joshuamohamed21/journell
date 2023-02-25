@@ -19,17 +19,17 @@ void main() async {
 //        value; // get-set key or its default value
 //  });
 
-//  MyApp app = MyApp(settings: effectiveSettings, prefsInstance: prefsInstance);
-    MyApp app = MyApp(settings: effectiveSettings);
+//  JournellApp app = JournellApp(settings: effectiveSettings, prefsInstance: prefsInstance);
+    JournellApp app = JournellApp(settings: effectiveSettings);
 
   runApp(app);
 }
 
-class MyApp extends StatefulWidget {
+class JournellApp extends StatefulWidget {
   final Map<dynamic, dynamic> settings;
 //  final SharedPreferences prefsInstance;
 
-  get constructor => MyApp.new;
+  get constructor => JournellApp.new;
 
 //  void updateSettingString(String key, String value) {
 //    settings[key] = value;
@@ -56,19 +56,19 @@ class MyApp extends StatefulWidget {
 //    prefsInstance.setStringList("settings_$key", value);
 //  }
 
-//  const MyApp({super.key, required this.settings, required this.prefsInstance});
-  const MyApp({super.key, required this.settings});
+//  const JournellApp({super.key, required this.settings, required this.prefsInstance});
+  const JournellApp({super.key, required this.settings});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<JournellApp> createState() => _JournellAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _JournellAppState extends State<JournellApp> {
 // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: "Journell",
       theme: effectiveLightTheme,
       darkTheme: effectiveDarkTheme,
       themeMode: themeModeTable[widget.settings["colorScheme"]],
