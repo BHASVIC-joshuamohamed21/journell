@@ -9,6 +9,7 @@ class NewNoteButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: () => newNoteCallback(),
+      foregroundColor: Theme.of(context).primaryIconTheme.color,
       child: const Icon(Icons.add),
     );
   }

@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
-final lightScheme = ColorScheme.fromSeed(
-  brightness: Brightness.light,
-  seedColor: Colors.blue,
-  primary: Colors.blue[600],
-  secondary: Colors.blue[700],
+final lightScheme = ColorScheme.light(
+  primary: Colors.deepPurple,
+  secondary: Colors.deepPurple.shade500,
 );
 
-final darkScheme = ColorScheme.fromSeed(
-  brightness: Brightness.dark,
-  seedColor: Colors.blue,
-  primary: Colors.blue[600],
-  secondary: Colors.blue[700],
+final darkScheme = ColorScheme.dark(
+  primary: Colors.deepPurple,
+  secondary: Colors.deepPurple.shade500,
 );
 
 final calculatedLightTheme =
